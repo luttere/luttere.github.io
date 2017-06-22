@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>"Атлетика" Спортивный клуб</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <header class="page-header">
+            <h1 class="visually-hidden">Спортивный клуб "Атлетика" - я выбираю спорт!</h1>
+            <div class="page-header__logo">
+                <picture>
+                    <source media="(min-width: 640px)" srcset="img/logo-tablet.svg" width="250px">
+                    <img src="img/logo-mobile.svg"  alt="Логотип">
+                </picture>
+            </div>
+
+            <nav class="main-nav main-nav--closed main-nav--nojs">
+                <button class="main-nav__toggle" type="button">Открыть меню</button>
+
+                <div class="main-nav__wrapper">
+                    <ul class="main-nav__items">
+                        <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
+                        <li class="main-nav__item"><a href="#price">Стоимость</a></li>
+                        <li class="main-nav__item"><a href="">Тренера</a></li>
+                        <li class="main-nav__item"><a href="">Контакты</a></li>
+                        <li class="main-nav__item"><a href="">Правила</a></li>
+                    </ul>
+                    <!--<ul class="main-nav__users-items">
+                        <li class="main-nav__users-item"><a href="" class="main-nav__users-login " 
+                        title="Войти">Вход </a></li>
+                    </ul>-->
+                </div>
+            </nav>
+        </header>
+
+        <section class="stats">
+            <header class="stats__header">
+                <h2 class="stats__title visually-hidden">
+                    Зачем заниматься спортм?</h2> 
+                <b class="stats__slogan">Заниматься <br class="stats__slogan--br">  спортом <br> необходимо</b>
+                <p class="stats__intro">Физические тренировки - это залог хорошего здоровья и красивого тела.
+                    Обратимся к исследованиям:</p>
+                <!--<smal class="stats__legend stats__legend--top"><sup>*</sup>
+                - приведённые данные ложь</smal>-->
+            </header>
+            <table class="stats-items" cellspacing="0">
+                <tr>
+                    <td class="stats__value">15<br> <span class="stats__value-text">минут</span></td>
+                    <td class="stats__field">занятий фитнесом в день<br>
+                    продлевают жизнь на 3 года</td>
+                </tr>
+                <tr>
+                    <td class="stats__value">14<br> <span class="stats__value-text">процентов</span></td>
+                    <td class="stats__field">на столько снижается риск<br>
+                                            серечных заболеваний при <br>
+                                            ежедневных занятиях спортом</td>
+                </tr>
+                <tr>
+                    <td class="stats__value">400<br> <span class="stats__value-text">ккал</span></td></td>
+                    <td class="stats__field">в среднем тратится<br>
+                                            за одну фитнес тренировку </td>
+                </tr>
+                <tr>
+                    <td class="stats__value">36<br> <span class="stats__value-text">часов</span></td></td>
+                    <td class="stats__field">длится сжигание калорий<br>
+                                            после полноценной тренировки </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="price">
+            <a name="price"> <a>
+            <div class="price__wrapper">
+                <ul class="price__items">
+                    <li class="price__item"></li>
+                    <li class="price__item"></li>
+                    <li class="price__item"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contakts">
+            <div class="contakts__wrapper">
+                <b class="stats__header stats__slogan contakts__info">
+                    Мы находимся по адресу: <br>  
+                    <span class="contakts__info--lowercase">город</span> Печора,<br>
+                    <span class="contakts__info--lowercase">улица</span> Комсомольская,<br>
+                    <span class="contakts__info--lowercase">дом</span> 15
+                    </b>
+            </div>
+        </section>
+        
+        <script>
+            var navMain = document.querySelector('.main-nav');
+            var navToggle = document.querySelector('.main-nav__toggle');
+
+            navMain.classList.remove("main-nav--nojs");
+
+            navToggle.addEventListener("click" , function(){
+                if (navMain.classList.contains("main-nav--closed")) {
+                    navMain.classList.remove("main-nav--closed");
+                    navMain.classList.add("main-nav--opened");
+                } else {
+                    navMain.classList.add("main-nav--closed");
+                    navMain.classList.remove("main-nav--opened");
+                }
+            });
+        </script>
+
+    </body>
+</html>

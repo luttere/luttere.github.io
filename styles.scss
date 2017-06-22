@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    border: 0;
+}
+
+
+@import "blocks/header.css";
+@import "blocks/stats.css";
+@import "blocks/advantages.css";
+@import "blocks/news.css";
+@import "blocks/price.css";
+@import "blocks/contakts.css";
+
+@mixin adaptive($media) {
+    @if $media == smart {
+        @media only screen and (max-width: 640px) {@content}
+    }
+    @else if $media == tablet {
+        @media only screen and (min-width: 640px) and (max-width: 960px) {@content}
+    }
+     @else if $media == pc {
+        @media only screen and (min-width: 961px)  {@content}
+    }    
+}
+
+$bg-darkgrey: #292929;
+$bg-lightgrey: #f8f5f2;
+
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+
+body {
+    font-size: 18px;
+    line-height: 27px;
+    font-family:"PT Sans Narrow", Arial, Helvetica, sans-serif;
+    color: #f7f4f1;
+
+    background: $bg-darkgrey url(img/barbershop-index-mobile.png)
+                no-repeat 50% 0;
+    background-size: 720px auto;
+    min-height: 750px;
+
+    @include adaptive(tablet){
+         background: $bg-darkgrey url(img/barbershop-index-mobile.png)
+                no-repeat 50% 0;
+        background-size: 1178px auto;
+    }
+
+    @include adaptive(pc){
+         background: $bg-darkgrey url(img/barbershop-index-mobile.png)
+                no-repeat 50% 0;
+        background-size: 1391px auto;
+    }
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

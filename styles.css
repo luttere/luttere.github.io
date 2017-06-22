@@ -1,0 +1,53 @@
+@import url(blocks/header.css);
+@import url(blocks/stats.css);
+@import url(blocks/advantages.css);
+@import url(blocks/news.css);
+@import url(blocks/price.css);
+@import url(blocks/contakts.css);
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  border: 0;
+}
+
+body {
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #f7f4f1;
+  background: #292929 url(img/barbershop-index-mobile.png) no-repeat 50% 0;
+  background-size: 720px auto;
+  min-height: 750px;
+}
+@media only screen and (min-width: 640px) and (max-width: 960px) {
+  body {
+    background: #292929 url(img/barbershop-index-mobile.png) no-repeat 50% 0;
+    background-size: 1178px auto;
+  }
+}
+@media only screen and (min-width: 961px) {
+  body {
+    background: #292929 url(img/barbershop-index-mobile.png) no-repeat 50% 0;
+    background-size: 1391px auto;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=styles.css.map */
